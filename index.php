@@ -16,7 +16,21 @@
 
 </head>
 <body>    
-    
+
+    <?php
+        // Assurez-vous d'avoir une connexion à la base de données
+        $server = "localhost";
+        $user = "root";
+        $password = "";
+        $db = "voyages_adeline";
+        $connexion = mysqli_connect($server, $user, $password,$db);
+
+        if (!$connexion) {
+        die("Échec de la connexion : " . mysqli_connect_error());
+        }
+
+    ?>
+
     <!-- début  topbar -->
     <section id="topbar">
         <div class="container">
@@ -252,23 +266,60 @@
                 <p class="top-p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit perferendis enim delectus quam? Adipisci minus culpa aliquam repellendus illum, ipsa itaque nesciunt ullam, at perferendis, eaque laboriosam officiis quae sequi.</p>
             </div>
             <div class="row">
-                
+                <?php
+                    $sql = "SELECT * FROM Destination LIMIT 3";
+                    $resultat = mysqli_query($connexion, $sql);
+                    if (mysqli_num_rows($resultat) > 0) {
+
+                        $count = 0; // debut du compteur
+
+                        while ($ligne = mysqli_fetch_assoc($resultat)) {
+
+                            $count ++;
+
+                            // Récupération des données de la destination
+                            $id_destination = $ligne['id_destination'];
+                            $description = $ligne['description'];
+                            $slogan = $ligne['slogan'];
+                            $title = $ligne['title'];
+                            $review = $ligne['review'];
+                            $rating = $ligne['rating'];
+                            $number_of_people = $ligne['number_of_people'];
+                            $max_of_people = $ligne['max_of_people'];
+                            $theme = $ligne['theme'];
+                            $price = $ligne['price'];
+                            $date_of_begin = $ligne['date_of_begin'];
+                            $date_of_end = $ligne['date_of_end'];
+                            // Récupération des données de l'adresse à partir de la table `Address`
+                            $id_address = $ligne['id_address'];
+                            $adresse_sql = "SELECT * FROM Address WHERE id_address = $id_address";
+                            $adresse_resultat = mysqli_query($connexion, $adresse_sql);
+                            $adresse_ligne = mysqli_fetch_assoc($adresse_resultat);
+                            // Utilisation des données récupérées
+                            $number = $adresse_ligne['number'];
+                            $street = $adresse_ligne['street'];
+                            $zipCode = $adresse_ligne['zipCode'];
+                            $city = $adresse_ligne['city'];
+                            $country = $adresse_ligne['country'];
+                ?>
             <article class="col offset-md-1">
                 <div class="card">
                     <img src="images/img6.jpg" alt="" class="card-img-top">
                     <div class="prix">
                         <button class="btn btn-primary">
-                            
+                            <strong><?php echo $price; ?></strong> / personne
                         </button>
                     </div>
                     
                     <div class="details">
                         <ul>
-                            
+                            <li><i class="bi bi-clock"></i> Du <?php echo $date_of_begin; ?> au <?php echo $date_of_end; ?></li>
+                            <li><i class="bi bi-people-fill"></i> Nombre de personnes : <?php echo $number_of_people; ?></li>
+                            <li><i class="bi bi-geo-alt-fill"></i> <?php echo $country; ?></li>
                         </ul>
                     </div>
                     <div class="card-body">
-
+                        <h5 class="card-title"><?php echo $title; ?></h5>
                     <div class="note">
                             <span>(25 notes)</span>
                             <div class="stars">
@@ -279,7 +330,7 @@
                                 <i class="bi bi-star-fill gris"></i>
                             </div>
                         </div>
-
+                        <p class="card-texte"><?php echo $description; ?></p>
                     </div>
                     <div class="card-body d-flex justify-content-around links">
                         <a href="#">Réservation <i class="bi bi-arrow-right-short"></i></a>
@@ -287,7 +338,13 @@
                     </div>
                 </div>
             </article>
- 
+            <?php
+                }
+                } else {
+                echo "Aucun résultat";
+                }
+
+                ?>
             <article class="col-md-1"></article>
             
         </div>
