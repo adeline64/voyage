@@ -11,8 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="./code/css/style.css">
+    <link rel="stylesheet" href="./code/css/responsive.css">
 
 </head>
 <body>    
@@ -58,7 +58,7 @@
             <div class="row">
                 <nav class="navbar navbar-expand-lg col-md-10 offset-md-1">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="index.html"><h3>VOYAGE</h3></a>
+                        <a class="navbar-brand" href="index.php"><h3>VOYAGE</h3></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
@@ -66,13 +66,13 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
+                                    <a class="nav-link active" aria-current="page" href="index.php">Accueil</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Destinations</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Contact</a>
+                                    <a class="nav-link" href="./code/php/contact.php">Contact</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Blog</a>
@@ -517,8 +517,8 @@
             <div class="col-md-3 offset-md-1">
                 <h4>A propos</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui iusto, explicabo accusamus laudantium ipsum quisquam totam omnis odio commodi officia incidunt quibusdam.</p>
-                <img src="images/logo6.png" alt="">
-                <img src="images/logo2.png" alt="">
+                <img src="./images/logo6.png" alt="">
+                <img src="./images/logo2.png" alt="">
             </div>
             <div class="col-md-3">
                 <h4>Informations de contact</h4>
