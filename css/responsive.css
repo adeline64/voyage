@@ -1,0 +1,49 @@
+@media all and (max-width:736px){
+
+    .hidden{display: none!important;}
+    .display-mobile{display: block!important;}
+
+    #populaires form{margin-top:0;}
+    .bleu img{position: relative;width:100%;left:0;}
+    .bleu{padding:01em 0}
+    .bleu .presentation {margin-left: 1%;}
+    #chiffres .telephone {
+    width: 80%;
+    position: relative;  bottom:0;
+    margin: 0 auto;
+}
+
+#top .col{
+    flex:auto
+}
+
+h3{font-size: 1.5em;}
+
+#topbar {background-color: #0791be; color:#fff;}
+#topbar .coordonnees ul{display: block!important;padding:0}
+
+#topbar span.ville { padding-left: 1.8em;}
+.top-p{width:94%;}
+
+.image-slider{background:url(../images/img15.jpg) no-repeat 0 0 scroll #0791be;
+background-size: cover;
+
+max-height:225px;overflow:hidden;
+
+}
+
+.image-slider h1{color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 2em;}
+
+}
+
+
+@media all and (orientation:landscape) and (max-width:812px){
+
+    #activites h5 {
+            font-size: 1em;
+            padding-top: 1em;
+}
+}
