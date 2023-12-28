@@ -13,8 +13,8 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
 
 </head>
 
@@ -58,7 +58,7 @@
             <div class="row">
                 <nav class="navbar navbar-expand-lg col-md-10 offset-md-1">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="index.html">
+                        <a class="navbar-brand" href="../../index.php">
                             <h3 class="text-white">VOYAGE</h3>
                         </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -70,13 +70,13 @@
                             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
                                     <a class="nav-link active text-white" aria-current="page"
-                                        href="index.html">Accueil</a>
+                                        href="../../index.php">Accueil</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-white" href="#">Destinations</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-white" href="contact.html">Contact</a>
+                                    <a class="nav-link text-white" href="../../contact.php">Contact</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-white" href="#">Blog</a>
@@ -120,8 +120,8 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui iusto, explicabo accusamus
                         laudantium
                         ipsum quisquam totam omnis odio commodi officia incidunt quibusdam.</p>
-                    <img src="images/logo6.png" alt="">
-                    <img src="images/logo2.png" alt="">
+                    <img src="../../images/logo6.png" alt="">
+                    <img src="../../images/logo2.png" alt="">
                 </div>
                 <div class="col-md-3">
                     <h4>Informations de contact</h4>
@@ -175,7 +175,7 @@
                     </ul>
                 </div>
                 <div class="col text-center">
-                    <img src="images/favicon.png" alt="" width="60">
+                    <img src="../../images/favicon.png" alt="" width="60">
                 </div>
                 <div class="col">
                     <p>Copyright Voyage 2023. Tous droits réservés</p>
