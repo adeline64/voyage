@@ -238,7 +238,7 @@ body{margin:0;padding:0;
     /* PAGE  404*/
     
     #page-titre-404{
-            background: url(../../../images/404-img.jpg) no-repeat scroll center center #000;
+            background: url(../../images/404-img.jpg) no-repeat scroll center center #000;
             background-size: cover;
             position: relative;text-align:center;
             margin-top: -10%;
