@@ -267,8 +267,13 @@
             </div>
             <div class="row">
                 <?php
-                    $sql = "SELECT * FROM Destination LIMIT 3";
+                    $sql = "SELECT Destination.*, Address.*
+                    FROM Destination
+                    JOIN Address ON Destination.id_address = Address.id_address
+                    LIMIT 3";
+
                     $resultat = mysqli_query($connexion, $sql);
+
                     if (mysqli_num_rows($resultat) > 0) {
 
                         $count = 0; // debut du compteur
@@ -278,29 +283,21 @@
                             $count ++;
 
                             // Récupération des données de la destination
-                            $id_destination = $ligne['id_destination'];
                             $description = $ligne['description'];
-                            $slogan = $ligne['slogan'];
                             $title = $ligne['title'];
-                            $review = $ligne['review'];
-                            $rating = $ligne['rating'];
                             $number_of_people = $ligne['number_of_people'];
                             $max_of_people = $ligne['max_of_people'];
-                            $theme = $ligne['theme'];
                             $price = $ligne['price'];
                             $date_of_begin = $ligne['date_of_begin'];
                             $date_of_end = $ligne['date_of_end'];
-                            // Récupération des données de l'adresse à partir de la table `Address`
-                            $id_address = $ligne['id_address'];
-                            $adresse_sql = "SELECT * FROM Address WHERE id_address = $id_address";
-                            $adresse_resultat = mysqli_query($connexion, $adresse_sql);
-                            $adresse_ligne = mysqli_fetch_assoc($adresse_resultat);
+
                             // Utilisation des données récupérées
-                            $number = $adresse_ligne['number'];
-                            $street = $adresse_ligne['street'];
-                            $zipCode = $adresse_ligne['zipCode'];
-                            $city = $adresse_ligne['city'];
-                            $country = $adresse_ligne['country'];
+                            // Récupération des données de l'adresse
+                            $number = $ligne['number'];
+                            $street = $ligne['street'];
+                            $zipCode = $ligne['zipCode'];
+                            $city = $ligne['city'];
+                            $country = $ligne['country'];
                 ?>
             <article class="col offset-md-1">
                 <div class="card">
